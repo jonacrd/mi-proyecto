@@ -1,0 +1,485 @@
+* {
+    box-sizing: border-box;
+}
+
+body, div, nav, ul, li, a, h1, h2, h3, h4 {
+margin: 0;
+padding: 0;
+}
+
+body {
+    --bg-color: radial-gradient(circle, rgb(234, 28, 28), rgb(158, 18, 18));
+    --card-bgc: radial-gradient(circle, rgb(232, 232, 232), rgb(181, 181, 181));
+    --window-tex: color: #fff6;
+    width: 100vw;
+    height: 100vh;
+    border: 2px solid blue;
+    background: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    position: relative;
+    overflow-x: hidden;
+    color: rgb(0, 0, 0);
+    
+}
+
+header {
+    position: absolute;
+    top: 150px;
+    color: rgb(204, 204, 204);
+}
+
+.profile {
+    position: absolute;
+    top: 350px;
+    left: 250px;
+    color: rgb(204, 204, 204);
+}
+
+
+.portfolio {
+    position: absolute;
+    width: clamp(70px, 300px, 300px);
+    height: 200px;
+    background: var(--card-bgc);
+    border-radius: 3.5px;
+    box-shadow: 0 0 10px #650000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    transition: transform 1s;
+}
+
+.portfolio:hover {
+    transform: scale(1.1);
+    transition: transform 1s;
+
+} 
+
+.window1 {
+    height: 190px;
+    width: 254px;
+    border-radius: 10px;
+    top: 90px; 
+    left: 250px; 
+    color: #cfcfcf99;
+    
+}
+.window1 video {
+    opacity: .99;
+    filter: blur(2px);
+    border-radius: 10px;
+    width: 260px;
+
+    transition: transform 1s;
+}
+
+.window1:hover video {
+    transform: scale(1.03);
+    transition: transform 1s;
+    opacity: 1;
+    filter: none;
+    transition: filter .5s;
+}
+
+.titulo-card1 {
+    border: none;
+    position: absolute;
+    top: 120px;
+    width: 180px;
+    
+}
+
+.titulo-card1 h2 {
+            filter: drop-shadow(0px 0px 2px #ffffff);
+    font-size: 2.2rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: 800;
+    border: none;
+}
+
+.titulo-card1 h2:hover {
+        color: #ffffff90;
+        filter: drop-shadow(0px 0px 6px #cdcdcd);
+        transition: filter .5s, color .5s;
+}
+.window1:hover {
+        color: #ffffff50;
+        transition: color .5s;
+}
+
+.window2 { 
+    top: 420px; 
+    left: 200px; 
+}
+.window3 { 
+
+    top: 300px; 
+    left: 650px; 
+    width: 250px; 
+    height: 270px; 
+    text-align: center;
+    transform: rotateY(50deg) rotateX(80deg);
+    box-shadow: -5px 15px 20px rgba(138, 0, 0, 0.352);
+    filter: drop-shadow(-10px 15px 20px #650000 );
+    transition: transform 6s, filter 6s, width 6s;
+    z-index: 20;
+    
+
+}
+.window3::before{
+    position: absolute;
+    content: '';
+    background: #c8c8c8;
+    border-radius: 10px;
+    width: 18px;
+    height: 10px;
+    top: -4px;
+    left:-3px;
+    transform: rotateY(30deg) rotateX(0deg);
+
+}
+.window3::after {
+        position: absolute;
+    content: '';
+    background: #c8c8c8;
+    border-radius: 10px;
+    width: 18px;
+    height: 10px;
+    top: 264px;
+    left:235px;
+    transform: rotateY(30deg) rotateX(50deg);
+}
+.window3 p {
+    transform: rotateY(0deg) rotateX(0deg);
+    transition: transform 2s;
+}
+
+.window3:hover {
+    width: 400px;
+    height: 270px;
+    transform: rotateY(0deg) rotateX(0deg) scale(1.3);
+    transform-style: preserve-3d;
+    box-shadow: -5px 15px 70px rgba(138, 0, 0, 0.352);
+    filter: drop-shadow(-10px 15px 80px #650000 );
+    transition: width 8s, transform 8s, filter 8s ease-in-out;
+    z-index: 20;
+}
+.window3:hover p {
+    transform: rotateY(10deg) rotateX(5deg) scale(1);
+    transition: transform 6s;
+}
+
+.window4 { 
+    top: 85px; 
+    left: 1000px; 
+}
+.window5 { 
+    top: 400px; 
+    left: 1000px; 
+}
+
+
+footer {
+    position: absolute;
+    top: 660px;
+        color: rgb(204, 204, 204);
+}
+
+@media (max-width: 1300px) {
+
+    body {
+        padding: 0;
+        margin: 0;
+        width: 100dvw;
+        height: 100dvh;
+        border: 2px solid blue;
+        background-color: gray;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content:start;
+        position: relative;
+}
+
+header {
+        position: absolute;
+        top: 500px;
+        left: 20px;
+}
+
+.profile {
+        position: absolute;
+        top: 500px;
+        left: 930px;
+    }
+
+
+.portfolio {
+        position: absolute;
+        width: 320px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .768rem;
+    }
+
+    .window1 { 
+        top: 20px; 
+        left: 20px;
+    }
+    .window2 { 
+        top: 20px; 
+        left: 793px; 
+    } 
+    .window3 { 
+        top: 425px; 
+        left: 370px; 
+        width: 400px; 
+        height: 450px; 
+    }
+    .window4 { 
+        top: 880px; 
+        left: 20px; 
+    }
+    .window5 { 
+        top: 880px; 
+        left: 793px; 
+    }
+
+
+footer {
+    position: absolute;
+    top: 1145px;
+    left: 540px;
+}
+
+}
+
+@media (max-width: 1200px) {
+
+    body {
+        padding: 0;
+        margin: 0;
+        width: 100dvw;
+        height: 100dvh;
+        border: 2px solid blue;
+        background-color: gray;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content:start;
+        position: relative;
+}
+
+header {
+        position: absolute;
+        top: 500px;
+        left: 20px;
+}
+
+.profile {
+        position: absolute;
+        top: 500px;
+        left: 930px;
+    }
+
+
+.portfolio {
+        position: absolute;
+        width: 320px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .768rem;
+    }
+
+    .window1 { 
+        top: 20px; 
+        left: 20px;
+    }
+    .window2 { 
+        top: 20px; 
+        left: 793px; 
+    } 
+    .window3 { 
+        top: 425px; 
+        left: 370px; 
+        width: 400px; 
+        height: 450px; 
+    }
+    .window4 { 
+        top: 880px; 
+        left: 20px; 
+    }
+    .window5 { 
+        top: 880px; 
+        left: 793px; 
+    }
+
+
+footer {
+    position: absolute;
+    top: 1145px;
+    left: 540px;
+}
+
+}
+
+@media (max-width: 430px) {
+
+    body {
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        border: 2px solid blue;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content:start;
+        position: relative;
+        overflow: hidden;
+}
+
+header {
+        position: absolute;
+        top: 270px;
+        left: 87px;
+}
+
+.profile {
+        position: absolute;
+        top: 600px;
+        left: 103px;
+    }
+
+
+.portfolio {
+        width: 160px;
+        height: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .768rem;
+    }
+
+    .window1 { 
+        top: 20px; 
+        left: 20px;
+    }
+    .window1 video {
+    opacity: .9;
+    border-radius: 10px;
+    width: 160px;
+}
+    .window2 { 
+        top: 20px; 
+        left: 218px; 
+    } 
+    .window3 { 
+        top: 320px; 
+        left: 100px; 
+        width: 200px; 
+        height: 250px; 
+    }
+    .window4 { 
+        top: 655px; 
+        left: 20px; 
+    }
+    .window5 { 
+        top: 655px; 
+        left: 218px; 
+    }
+
+
+footer {
+    position: absolute;
+    top: 1045px;
+    left: 150px;
+}
+
+}
+
+@media (max-width: 371px) {
+
+    body {
+        padding: 0;
+        margin: 0;
+        width: 100dvw;
+        height: 100dvh;
+        border: 2px solid blue;
+        background-color: gray;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content:start;
+        position: relative;
+        overflow: hidden;
+}
+
+header {
+        position: absolute;
+        top: 330px;
+        left: 80px;
+}
+
+.profile {
+        position: absolute;
+        top: 650px;
+        left: 80px;
+    }
+
+
+.portfolio {
+        position: absolute;
+        width: 150px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .768rem;
+    }
+
+    .window1 { 
+        top: 20px; 
+        left: 20px;
+    }
+    .window2 { 
+        top: 20px; 
+        left: 200px; 
+    } 
+    .window3 { 
+        top: 380px; 
+        left: 90px; 
+        width: 200px; 
+        height: 250px; 
+        transition: none;
+    }
+    .window4 { 
+        top: 710px; 
+        left: 20px; 
+    }
+    .window5 { 
+        top: 710px; 
+        left: 200px; 
+    }
+
+
+footer {
+    position: absolute;
+    top: 1045px;
+    left: 150px;
+}
+
+}
+
+
